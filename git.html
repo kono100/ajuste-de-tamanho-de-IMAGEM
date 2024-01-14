@@ -1,0 +1,217 @@
+======================================================================================================
+
+git init
+
+Inicializa um repositório Git em um diretório
+
+=======================================================================================================
+
+comando   ls     visualiza o que tem na pasta
+
+========================================================================================================
+
+
+git add <arquivo>
+
+adiciona um arquivo especificico
+
+
+
+para editar
+
+
+
+git add Graficos.py
+
+-------------------------------------------------------------------------------------------------
+
+git add .
+
+adiciona todos os arquivos
+
+========================================================================================================
+
+git push
+
+Envia as alterações locais para o repositório remoto
+
+-------------------------------------------------------------------------------------------------------
+
+git push --force origin main
+
+força o push do main (envia de qualquer jeito)
+
+
+=========================================================================================================
+
+git pull
+
+Atualiza o repositório local com as alterações do repositório remoto
+
+
+-------------------------------------------------------------------------------------------------------
+
+git pull --force origin main
+
+força o pull trazer os arquvos do repositorio remoto
+=========================================================================================================
+
+git reset --hard HEAD^
+
+esse comando desfaz o commit e o push e volta o ultimo commit feito
+
+________________________________________________________________________________________________________
+
+git reset --hard HEAD~1
+
+Desfazer o último commit e descartar as alterações
+
+==========================================================================================================
+
+git reset --soft HEAD^
+
+esse comando desfaz o push
+
+__________________________________________________________________________________________________________
+
+git reset --soft HEAD~1
+
+Desfazer o último commit mantendo as alterações
+
+=========================================================================================================
+
+git diff
+
+git diff visualiza a diferença total do que voce alterou no codigo...  terminal e deseja sair da visualização pressionar a tecla "Q" para sair
+
+=========================================================================================================
+
+
+para subir o projeto ao github
+
+
+git init
+git add .
+git commit -m "Primerio commit"
+git branch -M main
+git remote add origin git@github.com:kono100/Graficos.git
+git push -u origin main
+
+
+
+esse é para alterar 
+
+
+git init
+git add .
+git commit -m "Primerio commit"
+git branch -M main
+git remote add origin git@github.com:kono100/teste.git
+git push -u origin main
+
+
+
+=======================================================================================================
+
+
+para alterar os repositorios ja existentes do github
+
+
+git clone git@github.com:kono100/Gestao_de_Condominio_MRV.git
+cd Gestao_de_Condominio_MRV
+git add .
+git commit -m "Commit"
+git push origin main
+
+
+
+esse é para alterar 
+
+
+git clone git@github.com:kono100/Cadastro-de-Cliente.git
+cd Cadastro-de-Cliente
+git add .
+git commit -m "Commit"
+git push origin main
+
+
+==================================================================================================
+
+
+
+
+
+
+
+
+
+================================================================================================
+
+git branch
+git branch <nome_branch>
+
+Lista, cria ou exclui branches.
+
+________________________________________________________________________________________________
+
+git branch -d <nome_do_branch>
+
+    Excluir um branch após mesclar todas as alterações
+    
+_____________________________________________________________________________________________
+    
+git branch -D <nome_do_branch>
+    
+    Excluir um branch independentemente das alterações (forçado)
+
+================================================================================================
+
+git checkout <nome_branch>
+git checkout -- <arquivo>
+
+Muda para um branch específico ou restaura arquivos.
+
+===============================================================================================
+
+git merge <nome_branch>
+
+Combina as alterações de uma branch em outra.
+
+===============================================================================================
+
+git log
+
+Exibe um histórico de commits.
+
+===============================================================================================
+
+git remote -v
+git remote add <nome_remoto> <URL_do_repositório>
+
+
+Lista ou gerencia repositórios remotos.
+
+
+==============================================================================================
+
+git fetch
+
+Busca as alterações do repositório remoto sem realizar o merge
+
+
+
+==============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
