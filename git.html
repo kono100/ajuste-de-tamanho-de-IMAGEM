@@ -179,6 +179,34 @@ Combina as alterações de uma branch em outra.
 
 ===============================================================================================
 
+
+git push --set-upstream origin <nome_branch>:
+
+Faz o push do branch local <nome_branch> para o repositório remoto chamado "origin" e configura esse branch remoto como o upstream, facilitando futuros comandos de push e pull.
+
+_______________________________________________________________________________________________
+
+git config --global push.default current:
+    
+Configura globalmente o Git para empurrar o branch atual para um branch remoto com o mesmo nome por padrão, quando git push é executado sem especificar explicitamente o branch remoto e local.
+
+
+==============================================================================================
+
+
+
+git pull --set-upstream origin <nome_branch>:
+
+    Faz pull do branch remoto "origin/<nome_branch>" para o branch local <nome_branch>, configurando automaticamente o branch remoto como upstream.
+    
+___________________________________________________________________________________________________
+    
+git pull -u origin <nome_branch>:
+    
+Faz o mesmo que o comando anterior, mas usando a opção abreviada -u para configurar o upstream durante o pull.
+
+
+==============================================================================================
 git log
 
 Exibe um histórico de commits.
