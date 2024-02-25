@@ -8,17 +8,33 @@ def redimensionar_imagem(input_path, output_path, novo_tamanho):
     # Redimensionar a imagem para as novas dimensões
     nova_imagem = imagem.resize(novo_tamanho)
 
-    # Salvar a nova imagem
+    # Salvar a nova imagem na pasta Ajustada
     nova_imagem.save(output_path)
 
 # Diretórios de entrada e saída
 caminho_entrada = 'img/t.jpg'
-caminho_saida = 'Ajustada/exemplo_redimensionada.jpg'
 tamanho_desejado = (333, 100)
 
-# Certifique-se de que o diretório de saída existe, se não, crie
-if not os.path.exists('Ajustada'):
-    os.makedirs('Ajustada')
+# Caminho de saída na pasta Ajustada
+nome_arquivo = os.path.splitext(os.path.basename(caminho_entrada))[0]  # Obtém o nome do arquivo sem extensão
+caminho_saida = os.path.join('Ajustada', f'{nome_arquivo}(SF).png')
 
 # Redimensionar a imagem
 redimensionar_imagem(caminho_entrada, caminho_saida, tamanho_desejado)
+
+# Exibir informações
+print(f"\nSalvo como: {caminho_saida}\n")
+print(f"{tamanho_desejado}")
+
+# Verificar se já existe um arquivo com o mesmo nome e adicionar um sufixo numerado
+counter = 1
+while os.path.exists(caminho_saida):
+    output_filename = f'{nome_arquivo}(SF{counter}).png'
+    caminho_saida = os.path.join('Ajustada', output_filename)
+    counter += 1
+
+# Redimensionar novamente e salvar com o novo nome
+redimensionar_imagem(caminho_entrada, caminho_saida, tamanho_desejado)
+
+# Exibir novo nome do arquivo
+print(f"\nSalvo como: {caminho_saida}\n")
