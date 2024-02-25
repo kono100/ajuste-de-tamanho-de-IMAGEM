@@ -18,7 +18,7 @@ def redimensionar_imagem(input_path, output_path, novo_tamanho):
 # Diretórios de entrada e saída
 caminho_entrada = 'img/Imagem.jpg'
 
-tamanho_desejado = "1080x641"
+tamanho_desejado = "1000x650"
 tamanho_desejado = tamanho_desejado.replace("x", ",")
 tamanho_desejado = tuple(map(int, tamanho_desejado.split(",")))
 
