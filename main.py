@@ -12,8 +12,13 @@ def redimensionar_imagem(input_path, output_path, novo_tamanho):
     nova_imagem.save(output_path)
 
 # Diretórios de entrada e saída
-caminho_entrada = 'img/t.jpg'
-tamanho_desejado = (5,6)
+caminho_entrada = 'img/Imagem.jpg'
+
+tamanho_desejado = "1000x641"
+tamanho_desejado = tamanho_desejado.replace("x", ",")
+tamanho_desejado = tuple(map(int, tamanho_desejado.split(",")))
+
+
 tamanho_str = f"{tamanho_desejado[0]}x{tamanho_desejado[1]}"
 
 
